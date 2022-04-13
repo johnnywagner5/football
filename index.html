@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/main.css">
+   
+
+    <link rel="icon" href="images/favicon.ico">
+    
+    <title>Football!</title>
+</head>
+<body>
+    <header class="clearfix">
+      <a href="index.html"><img id="logoimage" src="images/logo.png"></a>
+      <h2>Cool Football Pictures!</h2>
+    </header>
+    
+   
+        <!-- Slideshow container -->
+    <div class="slideshow">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fadeout">
+      <img src="images/4.jpg">
+      
+    </div>
+  
+    <div class="mySlides fadeout">
+      <img src="images/2.jpg">
+      
+    </div>
+  
+    <div class="mySlides fadeout">
+      <img src="images/3.jpg">
+      
+    </div>
+  
+    <div class="mySlides fadeout">
+      <img src="images/5.jpg">
+      
+    </div>
+  
+    <div class="mySlides fadeout">
+      <img src="images/6.jpg">
+      
+    </div>
+  
+    <div class="mySlides fadeout">
+      <img src="images/7.jpg">
+      
+    </div>
+  
+    <div class="mySlides fadeout">
+      <img src="images/8.jpg">
+      
+    </div>
+  
+    <div class="mySlides fadeout">
+      <img src="images/9.jpg">
+      
+    </div>
+  
+    <div class="mySlides fadeout">
+      <img src="images/10.jpg">
+      
+    </div>
+  
+    
+  
+
+  </div>
+  <br>
+  
+  <div><button onclick="topFunction()" id="cornerbtn" title="Go to top">Return To Top</button></div>
+
+  <script>
+      // When the user scrolls down 800px from the top of the document, show the button
+       window.onscroll = function() {scrollFunction()};
+   
+       function scrollFunction() {
+         if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+           document.getElementById("cornerbtn").style.display = "block";
+         } else {
+           document.getElementById("cornerbtn").style.display = "none";
+         }
+       }
+   
+       // When the user clicks on the button, scroll to the top of the document
+       function topFunction() {
+         document.body.scrollTop = 0;
+         document.documentElement.scrollTop = 0;
+       }
+   </script>
+
+
+
+    <!-- Javascript - Get Current Year for the Footer -->
+    <script>
+      window.onload = function() {
+          var d = new Date();
+          document.getElementById("copyright").innerHTML = d.getFullYear();
+      }
+    </script>
+
+    <footer>
+      <p>&copy; <span id="copyright"></span> Jonathan Wagner Productions</p>
+    </footer>
+
+    <!-- slideshow script -->
+    <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides, 5000); // Change image every 5 seconds
+      }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
